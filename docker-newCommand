@@ -30,6 +30,12 @@
 
 16.docker import
 
-17.数据卷，端口映射，容器互联，
+17.docker port
 
-18.docker-compose,
+18.数据卷，端口映射，容器互联，
+
+19.docker-compose,
+
+20.利用Dockerfile创建镜像，
+
+
