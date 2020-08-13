@@ -1,0 +1,6 @@
+1.docker 安装redis
+
+docker run -itd --name redis-test -p 6379:6379 redis
+
+2.在本地控制台或者进入容器执行redis-cli
+docker exec -it redis-test /bin/bash
