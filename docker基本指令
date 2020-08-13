@@ -4,3 +4,5 @@
 4.docker ps
 5.docker exec
 6.docker tag
+7.docker pull
+8.docker search
