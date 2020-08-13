@@ -17,3 +17,6 @@
 9.docker push
 
 10.docker create
+
+11.docker logs
+12.docker kill
