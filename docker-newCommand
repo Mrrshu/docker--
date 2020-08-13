@@ -19,4 +19,15 @@
 10.docker create
 
 11.docker logs
+
 12.docker kill
+
+13.docker attach
+
+14.docker rm
+
+15.docker export
+
+16.docker import
+
+17.数据卷，，
