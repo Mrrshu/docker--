@@ -1,0 +1,5 @@
+1.docker pull nginx:latest
+
+2.docker run --name nginx-test -p 8080:80 -d nginx
+
+3.通过浏览器可以直接访问 8080 端口的 nginx 服务：
