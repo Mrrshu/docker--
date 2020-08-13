@@ -2,4 +2,8 @@
 
 2.docker run --name nginx-test -p 8080:80 -d nginx
 
+或者
+
+  docker run -d  -p 80:80 --name webserver  nginx
+
 3.通过浏览器可以直接访问 8080 端口的 nginx 服务：
