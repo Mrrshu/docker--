@@ -1,0 +1,6 @@
+1.docker run -itd --name 
+2.docker images
+3.docker restart/stop/start mysql
+4.docker ps
+5.docker exec
+6.docker tag
