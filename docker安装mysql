@@ -1,3 +1,5 @@
 1.运行容器，如果本地没有下载，就自动下载镜像
 docker run -itd --name mysql-test -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 mysql
 2.mysql -h localhost  -u root -p 
+
+3.控制台，无法登陆，待确认；
