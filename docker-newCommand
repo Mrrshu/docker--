@@ -1,0 +1,17 @@
+1.docker version
+
+2.docker inspect
+
+3.docker history
+
+4.docker rmi
+
+5.docker commit
+
+6.docker import
+
+7.docker save
+
+8.docker load
+
+9.docker push
