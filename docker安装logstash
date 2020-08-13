@@ -1,0 +1,36 @@
+1.Step1:
+        docker run \
+    -d \
+    -u 0 \
+    --name logstash \
+    -p 5044:5044\
+    docker.elastic.co/logstash/logstash:6.2.4
+    
+2.Step2:
+        进入容器:docker exec -it logstash /bin/bash
+
+      找到文件:/usr/share/logstash/pipeline
+
+      修改配置文件logstash.conf
+        input {
+            tcp {
+                port => 5044
+                codec => json_lines
+            }
+        }
+
+        output{
+            elasticsearch {
+                hosts => ["localhost:9200"]
+                action => "index"
+                index => "%{[appname]}"
+            }
+          stdout { codec => rubydebug }
+        }
+
+3.Step3:
+        重启容器:docker restart logstash
+        注意：配置中的localhost 替换成服务器地址，如果直接使用localhost 会导致logstash 服务无法连接上elasticsearch  服务，
+        导致spring cloud 项目服务连接到 logstash 服务时，该服务会报错，将拒绝项目连接elk 日志服务。
+        
+4.访问客户端：http://192.168.1.242:5601/login?next=%2F#?_g=()
