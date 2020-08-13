@@ -1,0 +1,24 @@
+1.安装kibana
+
+Step1:
+      docker run \
+          -d \
+          -u 0 \
+          --name kibana \
+          -p 5601:5601\
+          docker.elastic.co/kibana/kibana:6.2.4
+          
+Step2:
+        进入到容器内部:docker exec -it kibana /bin/bash
+
+        找到kibana的配置文件:/usr/share/kibana/config/ kibana.yml
+
+        修改配置文件,因为要绕过x-pack的安全检查
+
+        elasticsearch.url: http://localhost:9200
+
+        xpack.monitoring.ui.container.elasticsearch.enabled: false
+Step3:
+        重启容器:docker restart kibana
+
+注意：elasticsearch.ur 中的地址必须是 服务器的 ip 地址： 不然会报如图错误
