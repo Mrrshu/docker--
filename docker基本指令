@@ -2,7 +2,8 @@
 2.docker images
 3.docker restart/stop/start mysql
 4.docker ps
-5.docker exec
+5.docker exec 进入容器
 6.docker tag
 7.docker pull
 8.docker search
+9.exit 退出容器，
